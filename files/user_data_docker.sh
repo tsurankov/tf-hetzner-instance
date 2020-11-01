@@ -16,3 +16,9 @@ curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compo
 chmod +x /usr/local/bin/docker-compose
 mkdir -p /opt/backup/db
 mkdir -p /opt/backup/wordpress
+ufw default deny incoming
+ufw default allow outgoing
+ufw allow ssh
+ufw allow http
+ufw allow https
+ufw enable
